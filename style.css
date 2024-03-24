@@ -1,0 +1,480 @@
+@import url('animations.css');
+@import url('fonts.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --background-color: rgb(255, 255, 255);
+  --title-color: #4FD1B6;
+  --text-color: rgb(0, 0, 0);
+}
+
+body {
+  background: linear-gradient(56deg, transparent, transparent, #19cfaa21, transparent, transparent);
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.text-centered {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  margin-top: 40px;
+  font-size: 42px;
+}
+
+
+/* Header  */
+header {
+  background: #F5F5FB;
+  padding: 15px 15px 15px 15px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  transition: .6s ease-in;
+  /* font-family: "Wix Madefor Text", sans-serif; */
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.company-logo {
+  margin-left: 120px;
+  animation: slide 0.1s;
+}
+
+.header-links {
+  list-style: none;
+  gap: 60px;
+  margin-right: 150px;
+}
+
+.header-links > li > a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.burger-menu-mob-only {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1161px) {
+  .header-links {
+    gap: 43px;
+    margin-right: 60px;
+  }
+
+  .company-logo {
+    margin-left: 60px;
+  }
+}
+
+/* Code to handle hidden / reveal elements */
+.hide-element {
+  display: none;
+}
+
+.display-element {
+  display: block;
+}
+/* Code to handle hidden / reveal elements */
+
+
+/* Hide burger menu from big screens */
+@media (min-width: 760px) {
+  .burger-menu-mob-only {
+    display: none !important;
+  }
+}
+/* Hide burger menu from big screens */
+
+/* hide header links for small screens */
+@media (max-width: 760px) {
+  .header-links {
+    display: none;
+    margin-right: 0;
+  }
+
+  .header-links > li > a {
+    text-decoration: none;
+    color: var(--background-color);
+  }
+
+  .header-display {
+    background: #ff5189;
+    color: var(--background-color);
+    justify-content: space-between;
+    padding: 17px;
+    height: 100vh;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 71px;
+    text-align: center;
+  }
+
+  nav > ul > li {
+    border-top: 1px solid #dec2a11a;
+    border-bottom: 1px solid #dec2a11a;
+    padding: 35px;
+    animation: slide 0.4s;
+  }
+
+  .burger-menu-close {
+    background: none;
+    transition: 0.5s;
+    border: none;
+    animation: rotate 0.2s;
+  }
+}
+
+@media (max-width: 545px) {
+  .company-logo {
+    margin-left: 15px;
+  }
+
+  .burger-menu-close {
+    margin-left: -25px;
+  }
+
+  nav {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 338px) {
+  .burger-menu-close {
+    margin-left: -20px;
+  }
+
+  .company-logo {
+    margin-left: 0px;
+}
+}
+
+
+/* hide header links for small screens */
+/* Header  */
+
+
+/* banner section + responsiveness */
+.banner-section {
+  justify-content: center;
+  padding: 10px;
+  margin-top: 80px;
+}
+
+.welcome-section {
+  width: 35%;
+  margin-right: 65px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  animation: slide 0.2s;
+  transition: 0.2s ease-in;
+  font-family: "Playfair Display", serif;
+}
+
+.welcome-section > h1 {
+  font-size: 40px;
+}
+
+.welcome-section > p {
+  font-weight: 300;
+  line-height: 25px;
+  font-family: "Manrope", sans-serif;
+}
+
+
+.brandbooster {
+  color: #19cfaa;
+}
+
+.welcome-links {
+  gap: 20px;
+}
+
+.welcome-links > a {
+  text-decoration: none;
+  /* font-family: "Nanum Gothic", sans-serif; */
+  font-family: "Manrope", sans-serif;
+  font-weight: lighter;
+
+}
+
+.join-now {
+  padding: 10px 10px 10px 10px;
+  background: #395990;
+  border-radius: 4px;
+  color: var(--background-color);
+}
+
+.learn-more {
+  color: #395990;
+}
+
+.banner-img {
+  object-fit: cover;
+  border-radius: 20px;
+  width: 489px; 
+  height: 348px;
+}
+
+@media (max-width: 901px) {
+  .banner-section {
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    width: 80%;
+    margin-right: 0px 
+  }
+
+  .banner-img {
+    margin-top: 80px;
+    width: 80% !important;
+  }
+
+  .presentation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* banner section + responsiveness */
+
+/* About us + responsiveness */
+.about-us {
+  background: #263650;
+  color: var(--background-color);
+  padding: 17px;
+}
+
+.abt-us-image {
+  border-radius: 134px 134px 0px 0px !important;
+  width: 272px !important;
+  height: 414px !important;
+  margin: -5px 0px -21px 0px;
+}
+
+.discover-link {
+  background: #19cfaa;
+  color: var(--text-color) !important;
+}
+
+@media (max-width: 901px) {
+  .abt-us-image {
+    margin: 51px 0px -17px 0px;
+    width: 261px !important;
+    height: 331px !important;
+  }
+}
+/* About us + responsiveness */
+
+/* Features + responsiveness */
+
+#grid-title {
+  font-family: "Playfair Display", serif;  
+}
+
+
+#para {
+  /* font-family: "Nanum Gothic", sans-serif; */
+  font-weight: 300;
+  line-height: 25px;
+  font-family: "Manrope", sans-serif;
+
+}
+
+.features-grids {
+  width: 75%;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.grid-item-1, .grid-item-2, .grid-item-3, .grid-item-4  {
+  padding: 25px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.grid-item-4 {
+  background: #A3FDEB;
+  height: 320px;
+  background-image: url('/SRC/content.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 74px;
+}
+
+.grid-item-1 {
+  background: #FFE3B7;
+  height: 320px;
+  background-image: url('/SRC/globe.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;}
+
+  .grid-item-2 {
+    background: #E8A9BE;
+    height: 320px;
+    background-image: url('/SRC/analysis.png');
+    background-position: right 11px bottom 16px;
+    background-repeat: no-repeat;
+    background-size: 105px;
+  }
+
+.grid-item-3 {
+  background: #9FE0F4;
+  height: 320px;
+  background-image: url('/SRC/Engagement.png');
+  background-position: right 6px bottom 10px;
+  background-repeat: no-repeat;
+  background-size: 74px;
+}
+
+.column-span-1 {
+  grid-column: span 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+}
+
+.column-span-2 {
+  grid-column: span 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.grid-resize-para {
+  width: 70%;
+}
+
+.row-span {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+@media (max-width: 1065px) {
+  .features-grids {
+    width: 85%;
+  }
+}
+
+@media (max-width: 942px) {
+  .features-grids {
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 901px) {
+  .features-grids {
+    width: 94%;
+  }
+}
+
+@media (max-width: 870px) {
+  .features-grids {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-item-1, .grid-item-2 {
+    background-size: 74px;
+  }
+
+  .grid-resize-para {
+    width: 100%;
+  }
+
+  .column-span-1 {
+    grid-column: span 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+
+  .column-span-2 {
+    grid-column: span 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+
+}
+
+@media (max-width: 770px) {
+  .features-grids {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .column-span-1, .column-span-2 {
+    grid-column: span 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .footer-links {
+    gap: 20px;
+    list-style: none;
+    flex-direction: column;
+    margin-top: 201px;
+  }
+  .abt-desc {
+    align-items: center;
+  }
+
+  .all-rights {
+    margin-bottom: 40px;
+  }
+}
+/* Features + responsiveness */
+
+
+/* Footer + responsiveness */
+footer {
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 38px;
+  padding: 20px;
+  border-top: 1px solid #e1e1e8;
+  height: 220px;
+  width: 100%;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+}
+
+.footer-links {
+  gap: 42px;
+  list-style: none;
+}
+
+.footer-links > li > a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Footer + responsiveness */

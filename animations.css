@@ -1,0 +1,54 @@
+/* button animation */
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.2;
+    }
+
+    20% {
+      transform: rotate(104deg);
+      opacity: 0.4;
+    }
+
+    80% {
+      transform: rotate(259deg);
+      opacity: 0.5;
+    }
+
+    90% {
+      transform: rotate(300deg);
+      opacity: 1;
+    }
+
+    95% {
+      transform: rotate(330deg);
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+        transform: translateX(-341px);
+        opacity: 0.4;
+    }
+
+    45% {
+        transform: translateX(-220px);
+        opacity: 0.4;
+    }
+
+    60% {
+        transform: translateX(-120px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+  }
