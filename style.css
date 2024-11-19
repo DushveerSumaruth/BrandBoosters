@@ -54,9 +54,12 @@ header {
 }
 
 .header-links > li > a {
-  text-decoration: none;
   color: var(--text-color);
+  text-decoration: 2px underline transparent;
 }
+
+
+
 
 .burger-menu-mob-only {
   background: none;
@@ -120,7 +123,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 71px;
     text-align: center;
   }
 
@@ -146,10 +148,6 @@ header {
 
   .burger-menu-close {
     margin-left: -25px;
-  }
-
-  nav {
-    margin-right: 0px;
   }
 }
 
@@ -227,7 +225,7 @@ header {
 .banner-img {
   object-fit: cover;
   border-radius: 20px;
-  width: 489px; 
+  width: 489px;
   height: 348px;
 }
 
@@ -238,7 +236,7 @@ header {
 
   .welcome-section {
     width: 80%;
-    margin-right: 0px 
+    margin-right: 0px
   }
 
   .banner-img {
@@ -285,7 +283,7 @@ header {
 /* Features + responsiveness */
 
 #grid-title {
-  font-family: "Playfair Display", serif;  
+  font-family: "Playfair Display", serif;
 }
 
 
